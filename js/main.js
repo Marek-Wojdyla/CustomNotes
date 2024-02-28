@@ -1,6 +1,6 @@
 const addBtn = document.querySelector('.add');
 const deleteAllBtn = document.querySelector('.delete-all');
-const deleteNotebtn = document.getElementsByClassName('delete-note');
+const deleteNotebtn = document.getElementsByClassName('.delete-note');
 const saveBtn = document.querySelector('.save');
 const cancelBtn = document.querySelector('.cancel');
 
@@ -76,13 +76,15 @@ selectValue();
 const checkCategory = (note) => {
 	switch (selectedValue) {
 		case 'Zakupy':
-			note.style.backgroundColor = 'red';
+			note.style.backgroundColor = '#f37373';
 			break;
 		case 'Praca':
-			note.style.backgroundColor = 'green';
+			note.style.backgroundColor = '#4ceb4c';
 			break;
 		case 'Inne':
-			note.style.backgroundColor = 'blue';
+			note.style.backgroundColor = '#4c4cf7';
+			note.style.color = '#fff';
+			
 	}
 };
 
