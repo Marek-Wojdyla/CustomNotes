@@ -1,0 +1,141 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	height: 100vh;
+	font-family: 'Montserrat', sans-serif;
+	background-color: rgb(243, 243, 243);
+}
+
+.menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 40px;
+	height: 120px;
+}
+
+/* w tym miejscu stylujemy wszystkie przyciski na stronie */
+.menu button,
+.note-panel .save,
+.note-panel .cancel {
+	padding: 12px 25px;
+	background: none;
+	border: 1px solid #999;
+	border-radius: 5px;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background-color 0.3s, color 0.3s;
+}
+/* koniec */
+
+/* Dodaje odstęp miedzy ikoną a tekstem w przycisku */
+.faIcon {
+	padding-right: 10px;
+}
+/* koniec */
+
+/* Pozycjonuje miejsce w którym przechowywane są notatki */
+.note-area {
+	display: flex;
+	align-items: start;
+	flex-wrap: wrap;
+	padding: 20px;
+}
+/* koniec */
+
+/* Pozycjonuje samą notatkę */
+.note {
+	margin: 40px 20px;
+	width: 240px;
+	background-color: greenyellow;
+	border-radius: 5px;
+}
+
+.note-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	background-color: rgba(0, 0, 0, 0.06);
+}
+.note-body {
+	padding: 20px;
+}
+
+.delete-note {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+.fa-xmark {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+/* W tym miejscu dodajemy efekt zmiany
+koloru po najechaniu kursorem myszy na element */
+
+.menu button:hover,
+.note-panel .save:hover,
+.note-panel .cancel:hover {
+	background-color: #333;
+	color: #ddd;
+}
+
+.note-panel {
+	position: absolute;
+	width: 600px;
+	background-color: #ddd;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: column;
+	border-radius: 5px;
+	visibility: hidden;
+	box-shadow: 5px 9px 24px -5px rgba(66, 68, 90, 1);
+}
+
+.note-panel h2 {
+	padding: 20px;
+	text-align: center;
+}
+
+.note-panel select {
+	width: 50%;
+	padding: 8px;
+	border-radius: 5px;
+	text-align-last: center;
+	border: none;
+	margin-bottom: 20px;
+	margin-top: 5px;
+}
+
+.note-panel textarea {
+	max-width: 50%;
+	width: 50%;
+	min-width: 50%;
+	min-height: 82px;
+	border: none;
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+
+.error {
+	visibility: hidden;
+	color: red;
+	padding-bottom: 10px;
+}
+
+.panel-buttons {
+	width: 50%;
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: space-between;
+}
